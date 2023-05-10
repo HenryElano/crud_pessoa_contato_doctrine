@@ -1,0 +1,24 @@
+<div class="container mt-5 mb-5">
+    <form method='POST' action="?pg=consultaPessoa&act=filtraNome">
+            <label style='font-weight: bold'fonte->Pesquisar Pelo Nome:</label>
+            <input type='text' name='nome' class='form-control' value='{{nomePessoa}}'/>
+            <button type='submit' class='btn btn-primary' style='margin: 5px 0'>Pesquisar</button>
+    </form> 
+    <div class="row row-cols-auto justify-content-centerg-5">
+        <a href="index.php?pg=incluirPessoa" class="btn btn-primary">Incluir Nova Pessoa</a>
+
+        <table class='table' style="border: 1px solid black">
+            <thead>
+                <tr>
+                    <td style='font-weight: bold'>Id</td>
+                    <td style='font-weight: bold'>Nome</td>
+                    <td style='font-weight: bold'>CPF</td>
+                    <td style='font-weight: bold'>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{contentConsulta}}
+            </tbody>
+        </table>
+    </div>
+</div>
